@@ -137,7 +137,7 @@ class Database:
         try:
             update_result = self.users.update_many(
                 {"bot_username": {"$exists": False}},
-                {"$set": {"bot_username": "ITsGOLU_UPLOADER"}}
+                {"$set": {"bot_username": "Uploaderforwardbotbot"}}
             )
             
             if update_result.modified_count > 0:
@@ -145,7 +145,7 @@ class Database:
         except Exception as e:
             print(f"{Fore.RED}⚠ Could not migrate users: {str(e)}{Style.RESET_ALL}")
 
-    def get_user(self, user_id: int, bot_username: str = "ITsGOLU_UPLOADER") -> Optional[dict]:
+    def get_user(self, user_id: int, bot_username: str = "Uploaderforwardbotbot") -> Optional[dict]:
         """
         Retrieve a user document
         
